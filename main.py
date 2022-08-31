@@ -59,16 +59,15 @@ def pot():
 def rai():
     if request.method == 'POST':
         numero1 = request.form['num1']
-        numero2 = request.form['num2']
-        this.resultadoFinal = calc.raiz(numero1,numero2)
+
+        this.resultadoFinal = calc.raiz(numero1)
     return render_template("raiz.html", titulo= "raiz", resultado=this.resultadoFinal)    
 
 @app.route("/tabuada", methods=['POST','GET'])
 def tabu():
     if request.method == 'POST':
         numero1 = request.form['num1']
-        numero2 = request.form['num2']
-        this.resultadoFinal = calc.tabuada(numero1,numero2)
+        this.resultadoFinal = calc.tabuada(numero1)
     return render_template("tabuada.html", titulo= "tabuada", resultado=this.resultadoFinal)        
 
 # Press the green button in the gutter to run the script.
